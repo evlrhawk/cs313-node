@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 const dbConnectionString = process.env.DATABASE_URL || "something";
 const { Pool} = require('pg');
-const pool = new Pool({dbConnectionString: dbConnectionString});
+const pool = new Pool({connectionString: dbConnectionString});
 
 app.get("/person", getPerson);
 
