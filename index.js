@@ -23,5 +23,5 @@ function getPerson(req,res) {
        throw err
       }
 
-   res.json(result);
+   res.json(res.rows[0]);
 }
