@@ -6,7 +6,7 @@ const dbConnectionString = process.env.DATABASE_URL || "something";
 const { Pool} = require('pg');
 const pool = new Pool({dbConnectionString: dbConnectionString});
 
-app.get("/person:id=", getPerson);
+app.get("/person", getPerson);
 
 app.listen(port, function() {
    console.log("server is listening on port" + port);
