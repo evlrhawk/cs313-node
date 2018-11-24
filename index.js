@@ -12,7 +12,7 @@ app.listen(port, function() {
    console.log("server is listening on port" + port);
 });
 
-function getPerson(request,result) {
+function getPerson(request,response) {
    console.log("getting person...");
 
    // get id from req
@@ -22,6 +22,7 @@ function getPerson(request,result) {
    getPersonFromDB(id, function(error, result){
       if (error || result == null || result.length != 1){
          console.log("error power level not over 9000")
+         response.status(500).json({success: false, data: error});
       }
       else{
          response.status(200).json(result[0]);
