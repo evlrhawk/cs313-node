@@ -3,6 +3,8 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
 const dbConnectionString = process.env.DATABASE_URL || "something";
+const { Pool} = require('pg')
+const pool = new Pool();
 
 app.get("/person", getPerson);
 
@@ -16,5 +18,10 @@ function getPerson(req,res) {
    // get id from req
    console.log("Trying to connect to a db at: " + dbConnectionString);
 
-   res.json({name: "john"});
+   pool.query('SELECT * FROM person WHERE id = $1', [1], (err, res) => {
+      if (err) {
+       throw err
+      }
+
+   res.json(result);
 }
