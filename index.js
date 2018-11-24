@@ -38,7 +38,7 @@ function getPersonFromDB(id, callback){
          callback(err, null);
       }
      
-      callback(null, result.rows);
+      callback(null, res.rows);
      
      });
 
