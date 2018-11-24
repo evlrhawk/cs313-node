@@ -18,7 +18,7 @@ function getPerson(req,res) {
    // get id from req
    console.log("Trying to connect to a db at: " + dbConnectionString);
 
-   pool.query('SELECT * FROM person WHERE id = $1', [1], (err, res) => {
+   pool.query('SELECT * FROM person', (err, res) => {
       if (err) {
        throw err
       }
