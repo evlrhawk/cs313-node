@@ -39,7 +39,7 @@ function getPersonFromDB(id, callback){
 
      pool.query(sql, params, function(error, result){
       if (error){
-         console.log("log.wtf" + err);
+         console.log("log.wtf" + error);
          callback(error, null);
       }
      
