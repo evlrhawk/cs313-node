@@ -24,4 +24,6 @@ function getPerson(req,res) {
       }
 
    res.json(res.rows[0]);
-})
+   console.log('user:', res.rows[0])
+   })
+}
