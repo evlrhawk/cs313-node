@@ -12,19 +12,24 @@ app.listen(port, function() {
    console.log("server is listening on port" + port);
 });
 
-function getPerson(req,res) {
+function getPerson(request,result) {
    console.log("getting person...");
 
    // get id from req
-   var id = req.query.id;
+   var id = request.query.id;
    console.log("Trying to connect to a db at: " + dbConnectionString);
 
-   getPersonFromDB(id, function(err, res){
-      console.log("");
+   getPersonFromDB(id, function(error, result){
+      if (error || result == null || result.length != 1){
+
+      }
+      else{
+         response.json(result[0]);
+      }
    });
    
 
-   res.json(res);
+   
    
 }
 
@@ -32,13 +37,13 @@ function getPersonFromDB(id, callback){
      var sql = "SELECT * FROM person WHERE id = $1::int";
      var params = [id];
 
-     pool.query(sql, params, function(err, res){
-      if (err){
+     pool.query(sql, params, function(error, result){
+      if (error){
          console.log("log.wtf" + err);
-         callback(err, null);
+         callback(error, null);
       }
      
-      callback(null, res.rows);
+      callback(null, result.rows);
      
      });
 
