@@ -21,7 +21,7 @@ function getPerson(request,result) {
 
    getPersonFromDB(id, function(error, result){
       if (error || result == null || result.length != 1){
-
+         console.log("error power level not over 9000")
       }
       else{
          response.json(result[0]);
