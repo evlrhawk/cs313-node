@@ -24,7 +24,7 @@ function getPerson(request,result) {
          console.log("error power level not over 9000")
       }
       else{
-         response.json(result[0]);
+         response.status(200).json(result[0]);
       }
    });
    
