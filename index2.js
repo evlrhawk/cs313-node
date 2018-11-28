@@ -1,22 +1,16 @@
 const express = require("express");
-const controller = require("./controllers.js")
 
 const app = express();
 const port = process.env.PORT || 5000;
+const dbConnectionString = process.env.DATABASE_URL || "something";
+const { Pool} = require('pg');
+const pool = new Pool({connectionString: dbConnectionString});
 
-
-app.get("/user", controller.getUser);
-app.post("/user", controller.createUser);
+app.get("/person", getPerson);
 
 app.listen(port, function() {
    console.log("server is listening on port" + port);
 });
-
-// examples from team activities 
-
-app.get("/person", getPerson);
-
-
 
 function getPerson(request,response) {
    console.log("getting person...");
@@ -26,7 +20,7 @@ function getPerson(request,response) {
    console.log("Trying to connect to a db at: " + dbConnectionString);
 
    getPersonFromDB(id, function(error, result){
-      if (error || result == null || result.length < 1){
+      if (error || result == null || result.length != 1){
          console.log("error power level not over 9000")
          response.status(500).json({success: false, data: error});
       }
