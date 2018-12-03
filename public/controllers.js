@@ -4,8 +4,10 @@ function getUser(request, response) {
     console.log("Getting details for a soft drink");
 
    //url style "soft_drink?id=4"
-   var username = request.query.username;
-   var pwd = request.query.pwd;
+   // var username = request.query.username;
+   // var pwd = request.query.pwd;
+   var username = "admin";
+   var pwd = "admin";
 
    models.getUserFromDB(username, pwd, function(error, result){
       if (error || result == null || result.length < 1){
