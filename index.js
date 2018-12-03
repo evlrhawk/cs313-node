@@ -4,6 +4,9 @@ const controller = require("./controllers.js")
 const app = express();
 const port = process.env.PORT || 5000;
 
+app.use(express.static(__dirname + '/public'));
+app.use(express.json());
+app.use(express.urlencoded({extended : true}));
 
 app.get("/user", controller.getUser);
 app.post("/user", controller.createUser);
