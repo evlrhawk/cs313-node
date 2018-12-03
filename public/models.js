@@ -20,3 +20,7 @@ function getUserFromDB(username, pwd, callback){
 
 
 }
+
+module.exports = {
+        getUserFromDB: getUserFromDB
+};
