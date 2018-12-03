@@ -4,7 +4,7 @@ const controller = require("./public/controllers.js")
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(express.static(__dirname + '/public/budget.html'));
+app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
