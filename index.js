@@ -1,11 +1,10 @@
 const express = require("express");
-
+const controller = require("./public/controllers.js")
 
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(express.static(__dirname + '/public'));
-const controller = require("./controllers.js")
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
