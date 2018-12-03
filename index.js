@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
-app.get("/user", controller.getUser);
+app.get("/public/user", controller.getUser);
 app.post("/user", controller.createUser);
 
 // app.get("/category", controller.getCategory);
