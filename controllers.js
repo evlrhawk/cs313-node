@@ -7,9 +7,9 @@ function getUser(request, response) {
    var username = request.query.username;
    var pwd = request.query.pwd;
 
-   models.getPersonFromDB(username, pwd, function(error, result){
+   models.getUserFromDB(username, pwd, function(error, result){
       if (error || result == null || result.length < 1){
-         console.log("error power level not over 9000")
+         console.log("Error: Incorrect Username or Password")
          response.status(500).json({success: false, data: error});
       }
       else{
@@ -17,12 +17,44 @@ function getUser(request, response) {
       }
    });
 }
-
 function createUser(request, response) {
    // body...
 }
 
+function getCategory(argument) {
+   // body...
+}
+function createCategory(argument) {
+   // body...
+}
+
+function getBudget(argument) {
+   // body...
+}
+function createBudget(argument) {
+   // body...
+}
+function updateBudget(argument) {
+   // body...
+}
+
+function getExpense(argument) {
+   // body...
+}
+function createExpense(argument) {
+   // body...
+}
+function updateExpense(argument) {
+   // body...
+}
+
 module.exports = {
-      getUser: getUser,
-      createUser: createUser
+        getUser: getUser
+      , createUser: createUser
+      , getBudget: getBudget
+      , createBudget: createBudget
+      , updateBudget: updateBudget
+      , getExpense: getExpense
+      , createExpense: createExpense
+      , updateExpense: updateExpense
    };
