@@ -11,16 +11,16 @@ app.use(express.urlencoded({extended : true}));
 app.get("/user", controller.getUser);
 app.post("/user", controller.createUser);
 
-app.get("/category", controller.getCategory);
-app.post("/category", controller.createCategory);
+// app.get("/category", controller.getCategory);
+// app.post("/category", controller.createCategory);
 
-app.get("/budget", controller.getBudget);
-app.post("/budget", controller.createBudget);
-app.put("/budget", controller.updateBudget);
+// app.get("/budget", controller.getBudget);
+// app.post("/budget", controller.createBudget);
+// app.put("/budget", controller.updateBudget);
 
-app.get("/expense", controller.getExpense);
-app.post("/expense", controller.createExpense);
-app.put("/expense", controller.updateExpense);
+// app.get("/expense", controller.getExpense);
+// app.post("/expense", controller.createExpense);
+// app.put("/expense", controller.updateExpense);
 
 
 app.listen(port, function() {
