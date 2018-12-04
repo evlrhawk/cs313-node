@@ -1,4 +1,4 @@
-const models = require("./models.js")
+const models = require("./public/models.js")
 
 function getUser(request, response) {
     console.log("Getting details for a soft drink");
