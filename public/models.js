@@ -38,4 +38,5 @@ function postUserToDB(username, pwd, name) {
 
 module.exports = {
         getUserFromDB: getUserFromDB
+      , postUserToDB: postUserToDB
 };
