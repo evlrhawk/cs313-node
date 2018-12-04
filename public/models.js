@@ -24,7 +24,7 @@ function postUserToDB(username, pwd, name) {
      var sql = "INSERT INTO users (username, pwd, name) VALUES ($1, $2, $3)";
      var values = [username, pwd, name];
      console.log("MAde it here");
-     pool.query(sql, params, function(error, result){
+     pool.query(sql, values, function(error, result){
       if (error){
          console.log("UNABLE TO GET USER " + error);
          callback(error, null);
