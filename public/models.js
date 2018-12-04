@@ -3,9 +3,26 @@ const { Pool} = require('pg');
 const pool = new Pool({connectionString: dbConnectionString});
 
 function getUserFromDB(username, pwd, callback){
-     console.log("MAde it here");
      var sql = "SELECT id, username, pwd, name FROM users WHERE username = $1";
      var params = [username];
+     pool.query(sql, params, function(error, result){
+      if (error){
+         console.log("UNABLE TO GET USER " + error);
+         callback(error, null);
+      }
+      else{
+        callback(null, result.rows);   
+      }
+     
+     });
+
+
+}
+
+function postUserToDB(username, pwd, name) {
+    console.log("MAde it here");
+     var sql = "INSERT INTO users (username, pwd, name) VALUES ($1, $2, $3)";
+     var values = [username, pwd, name];
      console.log("MAde it here");
      pool.query(sql, params, function(error, result){
       if (error){
@@ -13,13 +30,10 @@ function getUserFromDB(username, pwd, callback){
          callback(error, null);
       }
       else{
-        console.log(result.rows);
         callback(null, result.rows);   
       }
      
      });
-
-
 }
 
 module.exports = {
