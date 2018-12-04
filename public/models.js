@@ -13,7 +13,7 @@ function getUserFromDB(username, pwd, callback){
          callback(error, null);
       }
       else{
-        console.log(rows);
+        console.log(result.rows);
         callback(null, result.rows);   
       }
      
