@@ -4,7 +4,7 @@ const pool = new Pool({connectionString: dbConnectionString});
 
 function getUserFromDB(username, pwd, callback){
      console.log("MAde it here");
-     var sql = "SELECT id, username, pwd, name FROM users WHERE username = $1::string";
+     var sql = "SELECT id, username, pwd, name FROM users WHERE username = $1";
      var params = [username];
      console.log("MAde it here");
      pool.query(sql, params, function(error, result){
