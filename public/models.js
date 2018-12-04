@@ -3,6 +3,7 @@ const { Pool} = require('pg');
 const pool = new Pool({connectionString: dbConnectionString});
 
 function getUserFromDB(username, pwd, callback){
+     console.log("MAde it here");
      var sql = "SELECT id, username, pwd, name FROM person WHERE username = $1::string";
      var params = [username];
      console.log("MAde it here");
