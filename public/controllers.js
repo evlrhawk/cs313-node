@@ -19,16 +19,16 @@ function getUser(request, response) {
    });
 }
 function createUser(request, response) {
-   var username = "test1";
-   var pwd = "test1";
-   var name = "test1"
+   var username = "test2";
+   var pwd = "test2";
+   var name = "test2"
    models.postUserToDB(username, pwd, name, function(error, result){
       if (error || result == null || result.length < 1){
          console.log("Error: Incorrect Username or Password")
          response.status(500).json({success: false, data: error});
       }
       else{
-         response.status(200).json(result[0]);
+         response.status(200).json(result);
       }
    });
 }
