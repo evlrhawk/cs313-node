@@ -30,7 +30,7 @@ function postUserToDB(username, pwd, name) {
          callback(error, null);
       }
       else{
-        callback(null, result.json({success: true}));   
+        callback(null, json({success: true}));   
       }
      
      });
