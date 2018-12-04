@@ -19,9 +19,9 @@ function getUser(request, response) {
    });
 }
 function createUser(request, response) {
-   var username = "test3";
-   var pwd = "test3";
-   var name = "test3"
+   var username = "test4";
+   var pwd = "test4";
+   var name = "test4"
    models.postUserToDB(username, pwd, name, function(error, result){
       if (error || result == null || result.length < 1){
          console.log("Error: Incorrect Username or Password")
