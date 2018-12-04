@@ -8,7 +8,7 @@ function getUser(request, response) {
    // var pwd = request.query.pwd;
    var username = "admin";
    var pwd = "admin";
-
+   console.log("Made it here 1");
    models.getUserFromDB(username, pwd, function(error, result){
       if (error || result == null || result.length < 1){
          console.log("Error: Incorrect Username or Password")
