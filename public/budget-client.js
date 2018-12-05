@@ -9,6 +9,7 @@ function getUser() {
 // Get query string for request
    var string = "/user?" + username + "&" + pwd;
 
+   console.log(string);
    var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function() {
       console.log("Made it thrice");
