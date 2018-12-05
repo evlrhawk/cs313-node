@@ -21,7 +21,7 @@ function getUser() {
          // }
          console.log(string1);
          string1 += obj.username + " " + obj.name;
-         document.getElementById("main").innerHTML = json(obj);
+         document.getElementById("main").innerHTML = obj.json();
          //console.log(obj);
        }
     };
