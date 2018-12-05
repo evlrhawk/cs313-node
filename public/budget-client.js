@@ -4,8 +4,8 @@ function getUser() {
    //url style "soft_drink?id=4"
    // var username = request.query.username;
    // var pwd = request.query.pwd;
-   var username = "admin=admin";
-   var pwd = "admin=admin";
+   var username = "username=admin";
+   var pwd = "pwd=admin";
 
 // Get query string for request
    var string = "/user?" + username + "&" + pwd;
