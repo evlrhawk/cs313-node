@@ -20,10 +20,12 @@ function getUser() {
          // }
          console.log(string1);
          user.innerHTML = obj;
-   };
-  xhttp.open("GET", string, true);
-  xhttp.send();
+    };
+    xhttp.open("GET", string, true);
+    xhttp.send();
+  }
 }
+
 function createUser() {
    // var username = request.body.username;
    var username = "test4";
@@ -55,29 +57,29 @@ function createUser() {
   }));
 }
 
-function getCategory(argument) {
-   // body...
-}
-function createCategory(argument) {
-   // body...
-}
+// function getCategory(argument) {
+//    // body...
+// }
+// function createCategory(argument) {
+//    // body...
+// }
 
-function getBudget(argument) {
+// function getBudget(argument) {
    
-}
-function createBudget(argument) {
-   // body...
-}
-function updateBudget(argument) {
-   // body...
-}
+// }
+// function createBudget(argument) {
+//    // body...
+// }
+// function updateBudget(argument) {
+//    // body...
+// }
 
-function getExpense(argument) {
-   // body...
-}
-function createExpense(argument) {
-   // body...
-}
-function updateExpense(argument) {
-   // body...
-}
+// function getExpense(argument) {
+//    // body...
+// }
+// function createExpense(argument) {
+//    // body...
+// }
+// function updateExpense(argument) {
+//    // body...
+// }
