@@ -20,7 +20,8 @@ function getUser() {
          //    //filling in string eith html
          // }
          console.log(string1);
-         document.getElementById("main").innerHTML = obj;
+         string1 += obj.username + " " + obj.name;
+         document.getElementById("main").innerHTML = json(obj);
          //console.log(obj);
        }
     };
