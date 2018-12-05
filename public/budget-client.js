@@ -4,6 +4,7 @@ function getUser() {
    // var pwd = request.query.pwd;
    var username = "username=admin";
    var pwd = "pwd=admin";
+   var user = document.getElementById("main");
 
 // Get query string for request
    var string = "/user?" + username + "&" + pwd;
@@ -18,7 +19,7 @@ function getUser() {
          //    //filling in string eith html
          // }
          console.log(string1);
-         demo.innerHTML = string1;
+         user.innerHTML = string1;
       }
    };
   xhttp.open("GET", string, true);
