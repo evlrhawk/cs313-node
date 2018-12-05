@@ -1,7 +1,7 @@
 const models = require("./models.js")
 
 function getUser(request, response) {
-    console.log("Getting details for a soft drink");
+   console.log("Getting details for a soft drink");
 
    //url style "soft_drink?id=4"
    var username = request.query.username;
