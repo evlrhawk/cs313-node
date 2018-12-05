@@ -19,7 +19,7 @@ function getUserFromDB(username, pwd, callback){
 
 }
 
-function postUserToDB(username, pwd, name) {
+function postUserToDB(username, pwd, name, callback) {
     console.log("MAde it here");
      var sql = "INSERT INTO users (username, pwd, name) VALUES ($1, $2, $3)";
      var values = [username, pwd, name];
@@ -30,7 +30,7 @@ function postUserToDB(username, pwd, name) {
          callback(error, null);
       }
       else{
-        callback(null, true);   
+        callback(null,result.json({success : true}));   
       }
      
      });

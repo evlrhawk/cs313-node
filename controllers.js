@@ -6,8 +6,7 @@ function getUser(request, response) {
    //url style "soft_drink?id=4"
    // var username = request.query.username;
    // var pwd = request.query.pwd;
-   var username = "admin";
-   var pwd = "admin";
+
    models.getUserFromDB(username, pwd, function(error, result){
       if (error || result == null || result.length < 1){
          console.log("Error: Incorrect Username or Password")
@@ -19,6 +18,7 @@ function getUser(request, response) {
    });
 }
 function createUser(request, response) {
+   // var username = request.body.username;
    var username = "test4";
    var pwd = "test4";
    var name = "test4"
