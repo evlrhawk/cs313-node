@@ -1,6 +1,4 @@
 function getUser() {
-    console.log("Getting details for a soft drink");
-
    //url style "soft_drink?id=4"
    // var username = request.query.username;
    // var pwd = request.query.pwd;
@@ -16,9 +14,9 @@ function getUser() {
          var obj = JSON.parse(this.responseText);
          
          var string1 = "";
-         for(var i = 0; i < obj.Search.length; i++){
-            //filling in string eith html
-         }
+         // for(var i = 0; i < obj.Search.length; i++){
+         //    //filling in string eith html
+         // }
          console.log(string1);
          demo.innerHTML = string1;
       }
