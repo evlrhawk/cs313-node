@@ -19,7 +19,7 @@ function getUser() {
          //    //filling in string eith html
          // }
          console.log(string1);
-         user.innerHTML = obj;
+         document.getElementById("main").innerHTML = obj;
     };
     xhttp.open("GET", string, true);
     xhttp.send();
