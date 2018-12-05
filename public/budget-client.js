@@ -7,7 +7,7 @@ function getUser() {
    var user = document.getElementById("main");
    console.log("Made it");
 // Get query string for request
-   var string = "/user?" + username + "&" + pwd;
+   var string = "../user?" + username + "&" + pwd;
 
    console.log(string);
    var xhttp = new XMLHttpRequest();
