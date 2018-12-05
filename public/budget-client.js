@@ -8,7 +8,7 @@ function getUser() {
    var pwd = "admin=admin";
 
 // Get query string for request
-   var string = "/user&" + username + "&" + pwd;
+   var string = "/user?" + username + "&" + pwd;
 
    var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function() {
