@@ -5,7 +5,7 @@ function getUser() {
    var username = "username=admin";
    var pwd = "pwd=admin";
    var user = document.getElementById("main");
-
+   console.log("Made it");
 // Get query string for request
    var string = "/user?" + username + "&" + pwd;
 
@@ -24,6 +24,7 @@ function getUser() {
     xhttp.open("GET", string, true);
     xhttp.send();
   }
+  console.log("Made it again");
 }
 
 function createUser() {
