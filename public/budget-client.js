@@ -15,7 +15,7 @@ function getUser() {
       if (this.readyState == 4 && this.status == 200) {
          var obj = JSON.parse(this.responseText);
          
-         var string1 = "<h1>Welcome" + obj.name + "!</h1>";
+         var string1 = "<h1>Welcome " + obj.name + "!</h1>";
          string1 += "<br> <h2>May you find all your budgeting needs satisfied here!</h1>";
 
          console.log(string1);
