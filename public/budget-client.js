@@ -67,9 +67,9 @@ function createUser() {
 //    // body...
 // }
 
-// function getBudget(argument) {
+function getBudget(argument) {
    
-// }
+}
 // function createBudget(argument) {
 //    // body...
 // }
@@ -88,3 +88,4 @@ function createUser() {
 // }
 
 document.getElementById("home").addEventListener("click", getUser);
+document.getElementById("budget").addEventListener("click", getBudget);
