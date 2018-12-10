@@ -15,12 +15,10 @@ function getUser() {
       if (this.readyState == 4 && this.status == 200) {
          var obj = JSON.parse(this.responseText);
          
-         var string1 = "";
-         // for(var i = 0; i < obj.Search.length; i++){
-         //    //filling in string eith html
-         // }
+         var string1 = "<h1>Welcome" + obj.name + "!</h1>";
+         string1 += "<br> <h2>May you find all your budgeting needs satisfied here!</h1>";
+
          console.log(string1);
-         string1 += obj.username + " " + obj.name;
          document.getElementById("main").innerHTML = string1;
          //console.log(obj);
        }
@@ -88,3 +86,5 @@ function createUser() {
 // function updateExpense(argument) {
 //    // body...
 // }
+
+document.getElementById("home").addEventListener("click", getUser);
