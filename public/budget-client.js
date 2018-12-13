@@ -36,7 +36,7 @@ function createUser() {
    var name = "test4"
 
 
-   var string = "http://www.omdbapi.com/?apikey=44d0bc01&s=" + search.value;
+   // var string = "http://www.omdbapi.com/?apikey=44d0bc01&s=" + search.value;
 
    var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function() {
