@@ -35,11 +35,7 @@ function postUserToDB(username, pwd, name, callback) {
 }
 
 function getBudgetFromDB(user_id, callback){
-     var sql = "SELECT u.username AS USERNAME, c.category AS CATEGORY, b._limit AS LIMIT, e.spent AS SPENT, e.description AS DESCRIPTION FROM budget b ";
-     sql += "JOIN users u on b.user_id = u.id ";
-     sql += "JOIN categories c on b.category_id = c.id ";
-     sql += "JOIN expense e on b.user_id = e.user_id AND b.category_id = e.category_id ";
-     sql += "WHERE b.user_id = $1";
+     var sql = "SELECT u.username AS USERNAME, c.category AS CATEGORY, b._limit AS LIMIT, e.spent AS SPENT, e.description AS DESCRIPTION FROM budget b JOIN users u on b.user_id = u.id JOIN categories c on b.category_id = c.id JOIN expense e on b.user_id = e.user_id AND b.category_id = e.category_id WHERE b.user_id = $1";
      var params = [user_id];
      pool.query(sql, params, function(error, result){
       if (error){
