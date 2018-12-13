@@ -86,7 +86,7 @@ function getBudget(argument) {
          var string1;
 
          console.log(obj);
-         document.getElementById("main").innerHTML = obj;
+         document.getElementById("main").innerHTML = obj.toString();
          //console.log(obj);
        }
     };
