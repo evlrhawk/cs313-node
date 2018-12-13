@@ -44,7 +44,7 @@ function getBudget(argument) {
    console.log("Getting details for a soft drink");
 
    //url style "soft_drink?id=4"
-   var user_id= request.query.user_id;
+   var user_id= request.query.userid;
 
    models.getBudgetFromDB(user_id, function(error, result){
       if (error || result == null || result.length < 1){

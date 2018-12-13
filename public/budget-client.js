@@ -75,7 +75,7 @@ function getBudget(argument) {
    var user = document.getElementById("main");
    console.log("Made it");
 // Get query string for request
-   var string = "../budget?user_id=" + user_id;
+   var string = "../budget?userid=" + user_id;
 
    console.log(string);
    var xhttp = new XMLHttpRequest();
