@@ -32,6 +32,38 @@ CREATE TABLE budget
    , _limit INT NOT NULL
 );
 
+SELECT u.username AS USERNAME, c.category AS CATEGORY, b._limit AS LIMIT, e.spent AS SPENT, e.description AS DESCRIPTION FROM budget b
+JOIN users u on b.user_id = u.id
+JOIN categories c on b.category_id = c.id
+JOIN expense e on b.user_id = e.user_id AND b.category_id = e.category_id
+WHERE b.user_id = 1;
+
+INSERT INTO expense(user_id, category_id, spent, description)
+VALUES
+  (1, 2, 635, "11/28/2018")
+, (1, 5, 55, "11/14/2018")
+, (1, 6, 25, "11/22/2018")
+, (1, 7, 200, "11/25/2018")
+, (1, 8, 33, "11/25/2018")
+, (1, 9, 20, "11/27/2018")
+, (1, 10, 139, "11/30/2018")
+, (1, 11, 300, "11/20/2018")
+, (1, 13, 20, "11/29/2018");
+
+INSERT INTO budget(user_id, category_id, _limit)
+VALUES
+  (1, 2, 635)
+, (1, 4, 200)
+, (1, 5, 60)
+, (1, 6, 75)
+, (1, 7, 300)
+, (1, 8, 50)
+, (1, 9, 40)
+, (1, 10, 140)
+, (1, 11, 300)
+, (1, 12, 50)
+, (1, 13, 20);
+
 INSERT INTO users (username, pwd, name)
 VALUES 
 (
@@ -70,9 +102,5 @@ VALUES
 , (2, 5, 80)
 , (2, 10, 150)
 , (2, 11, 300);
-
-SELECT u.username, c.category, _limit FROM budget b
-JOIN users u on b.user_id = u.id
-JOIN categories c on b.category_id = c.id;
 
 -- will have to join expense and budget tables

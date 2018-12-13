@@ -41,7 +41,20 @@ function createCategory(argument) {
 }
 
 function getBudget(argument) {
-   // body...
+   console.log("Getting details for a soft drink");
+
+   //url style "soft_drink?id=4"
+   var user_id= request.query.user_id;
+
+   models.getBudgetFromDB(user_id, function(error, result){
+      if (error || result == null || result.length < 1){
+         console.log("Error: Incorrect Username or Password")
+         response.status(500).json({success: false, data: error});
+      }
+      else{
+         response.status(200).json(result[0]);
+      }
+   });
 }
 function createBudget(argument) {
    // body...

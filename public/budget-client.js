@@ -68,7 +68,32 @@ function createUser() {
 // }
 
 function getBudget(argument) {
-   
+   //url style "soft_drink?id=4"
+   // var username = request.query.username;
+   // var pwd = request.query.pwd;
+   var user_id = 1;
+   var user = document.getElementById("main");
+   console.log("Made it");
+// Get query string for request
+   var string = "../budget?" + user_id;
+
+   console.log(string);
+   var xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+         var obj = JSON.parse(this.responseText);
+         
+         var string1;
+
+         console.log(string1);
+         document.getElementById("main").innerHTML = obj;
+         //console.log(obj);
+       }
+    };
+    xhttp.open("GET", string, true);
+    xhttp.send();
+  
+    console.log("Made it again");
 }
 // function createBudget(argument) {
 //    // body...

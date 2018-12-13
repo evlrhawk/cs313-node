@@ -14,7 +14,7 @@ app.post("/user", controller.createUser);
 // app.get("/category", controller.getCategory);
 // app.post("/category", controller.createCategory);
 
-// app.get("/budget", controller.getBudget);
+app.get("/budget", controller.getBudget);
 // app.post("/budget", controller.createBudget);
 // app.put("/budget", controller.updateBudget);
 
