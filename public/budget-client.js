@@ -71,7 +71,7 @@ function getBudget(argument) {
    //url style "soft_drink?id=4"
    // var username = request.query.username;
    // var pwd = request.query.pwd;
-   var user_id = "1";
+   var user_id = 1;
    var user = document.getElementById("main");
    console.log("Made it");
 // Get query string for request
