@@ -40,7 +40,7 @@ function createCategory(argument) {
    // body...
 }
 
-function getBudget(argument) {
+function getBudget(request, response) {
    console.log("Getting details for a soft drink");
 
    //url style "soft_drink?id=4"
