@@ -34,7 +34,7 @@ function postUserToDB(username, pwd, name, callback) {
      });
 }
 
-function getUserFromDB(user_id, callback){
+function getBudgetFromDB(user_id, callback){
      var sql = "SELECT u.username AS USERNAME, c.category AS CATEGORY, b._limit AS LIMIT, e.spent AS SPENT, e.description AS DESCRIPTION FROM budget b ";
      sql += "JOIN users u on b.user_id = u.id ";
      sql += "JOIN categories c on b.category_id = c.id ";
