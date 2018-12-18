@@ -84,9 +84,13 @@ function getBudget(argument) {
          var obj = JSON.parse(this.responseText);
          
          var string1;
+         var string2;
+         var string3;
 
          console.log(obj);
          document.getElementById("main").innerHTML = JSON.stringify(obj);
+         document.getElementById("exp").innerHTML = string2;
+         document.getElementById("cat").innerHTML = string2;
          //console.log(obj);
        }
     };
